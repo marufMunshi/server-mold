@@ -1,9 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: $primaryFont;
+    font-family: $primary-font;
     background: $bodyColor;
-    font-size: 1rem;
+    font-size: 16px;
+    color: #333;
 }
 
 a {
@@ -29,4 +30,9 @@ h6 {
 
 em {
     font-style: normal;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }

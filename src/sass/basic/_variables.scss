@@ -3,17 +3,17 @@
 $whiteColor: #FFFFFF;
 $fontColor: #212529;
 $linkColor : #0056b3;
-$bodyColor: #EDEEF3;            
+$bodyColor: #fafafa;            
 
 
-$primaryColor: #3168D1;             
+$primary-color: #3168D1;             
 $secondaryColor: #A8AAB2;
-$tertiaryColor: #EB7A3F;
+$tertiary-color: #EB7A3F;
 
 /* Fonts
 ---------------------------*/
-$primaryFont: 'Nunito', sans-serif;
-$secondaryFont: 'Poiret One', cursive;
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Roboto Slab', serif;
 
 /* Font Weight
 ---------------------------*/
@@ -24,8 +24,8 @@ $highWeight: 700;
 
 /* z-index
 ---------------------------*/
-$zLowIndex: 1;
-$zMidIndex: 5;
+$z-low-index: 1;
+$z-mid-index: 5;
 $zHighIndex: 9;
 
 /* Spaces

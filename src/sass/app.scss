@@ -9,4 +9,11 @@
 // Helpers
 @import 'helpers/_mixins.scss';
 @import 'helpers/_media-query.scss';
+@import 'helpers/_animation.scss';
 @import 'helpers/_hover-effect.scss';
+
+// Components
+@import 'components/_nav.scss';
+
+// Pages
+@import 'pages/_home.scss';

@@ -1,2 +1,164 @@
-#home-page {
+/*
+Header Start
+------------*/
+header {
+    // background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)), url('../images/background-2.jpg');
+    background-image: linear-gradient(to bottom, #67809F, #054135);
+    background-position: 50% 50%;
+    background-size: cover;
+    // background-position: center;
+    height: 100vh; /*100% of the view port */
+
+    .particles-js-canvas-el {
+        position: absolute;
+        width: 100%;
+        top: 12vh;
+        height: 80vh !important;
+    }
+
+    .hero-text-box {
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        transform: translate(-30%, -45%);
+        color: #fff;
+
+        h1 {
+            font-size: 220%;
+            word-spacing: 5px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        p {
+            font-family: $secondary-font;
+            margin-top: 20px;
+            font-size: 140%;
+            word-spacing: 3px;
+            color: #ECF0F1;
+
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style: none;
+            font-family: $secondary-font;
+            font-size: 110%;
+            word-spacing: 2px;
+
+            li {
+                &::before{
+                    font-family: ionicons;
+                    content: "\f120";
+                    color: #fff;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            @include primary-button (#26C281, #ffffff, 110% );
+            box-shadow: none;
+            font-weight: bold;
+        }
+    }
+
+    .contact {
+        color: #fff;
+        position: absolute;
+        bottom: 3%;
+        left: 10%;
+        font-weight: bold;
+        letter-spacing: 2px;
+
+        i {
+            font-size: 170%;
+            vertical-align: middle;
+            
+            &::before {
+                animation: bounce .9s infinite;
+            }
+        }
+    }
 }
+/*
+Header End
+------------*/
+
+/*
+Features Section Start
+-------------------------*/
+
+#features-section {
+    padding-top: 50px;
+    
+    .features {
+        background-color: #ffffff;
+        border: 1px solid #ececec;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin-bottom: 25px;
+
+        .features__title {
+            img {
+                width: 42px;
+                height: auto;
+                margin-right: 5px;
+            }
+
+            margin-top: 20px;
+            font-size: 160%;
+            text-align: center;
+            font-weight: normal;
+            word-spacing: 3px;
+        }
+
+        .features__description {
+            font-family: $secondary-font;
+            margin: 20px 0;
+            word-spacing: 2px;
+            line-height: 140%;
+            font-size: 105%;
+            color: #4d4b4b;
+        }
+    }
+}
+
+
+/*
+Features Section End
+-------------------------*/
+
+
+/*
+Customer In Numbers Section Start
+---------------------------------*/
+
+#customer-in-numbers {
+    padding-top: 50px;
+    background-image: linear-gradient(to left, rgba(82, 90, 119, 0.9), rgba(29, 130, 125, .7)), url(../images/clouds.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25vh;
+
+    .customer-number {
+        text-align: center;
+        color: #ffffff;
+        font-size: 140%;
+        font-weight: bold;
+
+        &.customer-number--last {
+            padding-top: 20px;
+        }
+    }
+}
+
+
+/*
+Customer In Numbers Section End
+---------------------------------*/
