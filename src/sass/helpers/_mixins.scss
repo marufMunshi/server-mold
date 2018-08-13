@@ -1,9 +1,9 @@
 /*
     Buttons 
 ---------------*/
-@mixin primary-button ($bgColor, $fontColor: #ffffff, $hoverColor: darken($bgColor, 10%), $fontSize: 100% ) {
+@mixin primary-button ($bgColor, $font-color: #ffffff, $hoverColor: darken($bgColor, 10%), $fontSize: 100% ) {
     font-size: $fontSize;
-    color: $fontColor;
+    color: $font-color;
     border-radius: 3px;
     background-color: $bgColor;
     box-shadow: 0px 3px 6px -4px #a2a2a2;
@@ -19,7 +19,7 @@
     }
 }
 
-@mixin ghost-button ($bgColor, $fontColor: #ffffff, $fontSize: 100%) {
+@mixin ghost-button ($bgColor, $font-color: #ffffff, $fontSize: 100%) {
     color: $bgColor;
     border-color: $bgColor;
     font-size: $fontSize;
@@ -33,7 +33,7 @@
     }
 
     &:hover {
-        color: $fontColor;
+        color: $font-color;
         background-color: $bgColor;
     }
 }
@@ -68,7 +68,7 @@
     }
 
     a {
-        color: $linkColor;
+        color: $link-color;
     }
 
     @include tablet {
@@ -165,7 +165,7 @@
     }
 
     .wp-caption-text {
-        color: $secondaryColor;
+        color: $secondary-color;
         text-align: center;
         margin-bottom: 20px;
     }
