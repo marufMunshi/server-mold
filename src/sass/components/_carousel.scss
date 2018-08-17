@@ -22,8 +22,8 @@
         text-align: left;
 
         &:after {
-            content: "\f104";
-            font-family: "Font Awesome 5 Free"; 
+            content: "\f106";
+            font-family: "ionicons"; 
             font-weight: 900; 
             font-size: 3rem;
         }
@@ -34,9 +34,9 @@
         text-align: right;
 
         &:after {
-            font-family: "Font Awesome 5 Free"; 
+            font-family: "ionicons"; 
             font-weight: 900; 
-            content: "\f105";
+            content: "\f109";
             font-size: 3rem;
         }
     }
@@ -45,9 +45,8 @@
 .slick-dots {
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 15px;
     font-size: 0;
-    color: #34495E;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
@@ -60,7 +59,7 @@
             border: none;
 
             &::before {
-                color: rgb(255, 249, 249);
+                color: #7fd6a0;
                 font: 20px/1 'ionicons';
                 content: "\f3a6";
                 opacity: .7;
@@ -78,7 +77,7 @@
 }
 
 .slick-dots li.slick-active button::before {
-    color: #34495E;
+    color: #436c94;
     opacity: 1;
     font: 20px/1 'ionicons';
     content: "\f3a7";

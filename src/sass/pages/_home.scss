@@ -168,7 +168,7 @@ Customer In Numbers Section End
 Plans Section Start
 ---------------------*/
 #plans {
-    padding-top: 20px;
+    padding: 20px 0;
     background-color: #ffffff;
 
     h1 {
@@ -221,7 +221,45 @@ Plans Section Start
 
     }
 }
-
 /*
 Plans Section End
 ---------------------*/
+
+/*
+Testimonial Section Start
+--------------------------*/
+#testimonials {
+    background-color: #fff;
+    h1 {
+        @include home-page-title(170%);
+        background-image: linear-gradient(to right, #92a692, #154d4c);
+        background-position: 50% 50%;
+        background-size: cover;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .client-review {
+        .client-review__quote {
+            padding: 30px 10px 25px 10px;
+            margin-bottom: 0;
+            text-align: center;
+
+            cite {
+                display: block;
+                margin: 25px 0;
+                img {
+                    display: inline-block;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+/*
+Testimonial Section End
+-------------------------*/
