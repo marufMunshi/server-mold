@@ -2,7 +2,7 @@
 Header Start
 ------------*/
 @mixin home-page-title($font-size) {
-    padding-top: 20px;
+    padding-top: 25px;
     font-size: $font-size;
     text-align: center;
     font-weight: normal;
@@ -142,11 +142,10 @@ Features Section End
 Customer In Numbers Section Start
 ---------------------------------*/
 #customer-in-numbers {
-    padding-top: 50px;
+    padding: 50px 0;
     background-image: linear-gradient(to left top, rgba(82, 90, 119, 0.9), rgba(29, 130, 125, .7)), url(../images/clouds.svg);
     background-position: center;
     background-repeat: no-repeat;
-    height: 25vh;
 
     .customer-number {
         text-align: center;
@@ -168,12 +167,19 @@ Customer In Numbers Section End
 Plans Section Start
 ---------------------*/
 #plans {
-    padding: 20px 0;
     background-color: #ffffff;
 
     h1 {
         @include home-page-title(170%);
-        padding-bottom: 40px;
+        padding: 37px 0;
+        &:after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            margin: 0 auto; /* This will center the border. */
+            width: 70%; /* Change this to whatever width you want. */
+            padding-top: 10px; /* This creates some space between the element and the border. */
+            border-bottom: 2px solid #555; /* This creates the border. Replace black with whatever color you want. */
+        }
     }
 
     .pricing-box {
@@ -229,25 +235,36 @@ Plans Section End
 Testimonial Section Start
 --------------------------*/
 #testimonials {
-    background-color: #fff;
+    background-image: linear-gradient(to right bottom, #92a692, #154d4c);
+    background-position: 50% 50%;
+    background-size: cover;
+    color: #fff;
+
     h1 {
         @include home-page-title(170%);
-        background-image: linear-gradient(to right, #92a692, #154d4c);
-        background-position: 50% 50%;
-        background-size: cover;
-        color: #fff;
-        padding-bottom: 20px;
+        &:after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            margin: 0 auto; /* This will center the border. */
+            width: 50%; /* Change this to whatever width you want. */
+            padding-top: 10px; /* This creates some space between the element and the border. */
+            border-bottom: 3px solid #fff; /* This creates the border. Replace black with whatever color you want. */
+        }
     }
 
     .client-review {
         .client-review__quote {
-            padding: 30px 10px 25px 10px;
+            padding: 30px 10px 50px 10px;
             margin-bottom: 0;
             text-align: center;
+            font-family: $secondary-font;
+            word-spacing: 3px;
+            line-height: 145%;
 
             cite {
                 display: block;
                 margin: 25px 0;
+
                 img {
                     display: inline-block;
                     height: 45px;

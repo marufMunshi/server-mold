@@ -45,7 +45,7 @@
 .slick-dots {
     position: absolute;
     z-index: 2;
-    bottom: 15px;
+    bottom: 35px;
     font-size: 0;
     text-align: center;
     left: 50%;
@@ -59,7 +59,7 @@
             border: none;
 
             &::before {
-                color: #7fd6a0;
+                color: #79d79d;
                 font: 20px/1 'ionicons';
                 content: "\f3a6";
                 opacity: .7;
@@ -77,7 +77,7 @@
 }
 
 .slick-dots li.slick-active button::before {
-    color: #436c94;
+    color: #c5d1dd;
     opacity: 1;
     font: 20px/1 'ionicons';
     content: "\f3a7";
