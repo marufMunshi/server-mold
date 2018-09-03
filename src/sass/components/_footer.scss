@@ -1,0 +1,52 @@
+footer {
+    padding-top: 25px;
+    background-color: #fafafa;
+    color: #2C3E50;
+
+    h1 {
+        font-size: 180%;
+        text-align: center;
+        font-weight: normal;
+        word-spacing: 3px;
+        margin-bottom: 20px;
+
+        @include tablet {
+            font-size: 190%;
+        }
+
+        img {
+            display: inline-block;
+            height: 45px;
+            width: auto;
+            margin-right: 10px;
+        }
+    }
+
+    p {
+        padding: 5px 0;
+        font-family: $secondary-font;
+        text-align: center;
+        font-size: 100%;
+
+        @include phablet {
+            font-size: 105%;
+        }
+
+        @include tablet {
+            font-size: 110%;
+        }
+
+        span {
+            margin-left: 10px;
+            font-size: 105%;
+        }
+    }
+
+    .copyright {
+        margin-top: 25px;
+        padding: 10px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 85%;
+    }
+}
