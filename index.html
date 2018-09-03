@@ -19,40 +19,61 @@
 
     <body>
 
-        <header>
+        <header id="header">
             <div id="particles-js">
-
             </div>
-            <nav class="nav">
-                <div class="showed-nav">
-                    <ul class="logo">
+
+            <nav class="touch-nav d-lg-none">
+                <div class="touch-nav__show">
+                    <ul class="touch-nav__logo">
                         <li>
                             <img src="./src/images/logo.png" alt="Server Mold">
                         </li>
                     </ul>
             
-                    <ul class="hamburger-menu">
+                    <ul class="touch-nav__hamburger-menu">
                         <li>
                             <i class="ion-android-menu"></i>
                         </li>
                     </ul>
                 </div>
 
-                <div class="menu-link">
+                <div class="touch-nav__menu-link">
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#header">Home</a>
                         </li>
                         <li>
-                            <a href="#">Hosting Services</a>
+                            <a href="#plans">Hosting Services</a>
                         </li>
                         <li>
-                            <a href="#">Pages</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#footer">Contact Us</a>
                         </li>
                     </ul>
+                </div>
+            </nav>
+
+            <nav class="d-none d-lg-block d-xl-block">
+                <div class="desktop-nav">
+                    <ul class="desktop-nav__logo" >
+                        <li>
+                            <img src="./src/images/logo.png" alt="Server Mold">
+                        </li>
+                    </ul>
+    
+                    <div class="desktop-nav__menu-link">
+                        <ul>
+                            <li>
+                                <a href="#header">Home</a>
+                            </li>
+                            <li>
+                                <a href="#plans">Hosting Services</a>
+                            </li>
+                            <li>
+                                <a href="#footer">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
 
@@ -78,7 +99,7 @@
         <section id="features-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <div class="features">
                             <h2 class="features__title">
                                 <img src="./src/images/hub.svg" alt="Shared Hosting">
@@ -91,7 +112,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <div class="features">
                             <h2 class="features__title">
                                 <img src="./src/images/server.svg" alt="Dedicated Servers">
@@ -104,11 +125,24 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <div class="features">
                             <h2 class="features__title">
                                 <img src="./src/images/monitoring.svg" alt="WordPress Hosting">
                                 WordPress Hosting
+                            </h2>
+                            <p class="features__description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="features">
+                            <h2 class="features__title">
+                                <img src="./src/images/online-support.svg" alt="Support">
+                                24/7 Support
                             </h2>
                             <p class="features__description">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting 
@@ -122,18 +156,10 @@
         </section>
 
         <section id="customer-in-numbers">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <p class="customer-number">1002 Clients</p>
-                    </div>
-                    <div class="col-6">
-                        <p class="customer-number">556 Servers</p>
-                    </div>
-                    <div class="offset-2 col-8">
-                        <p class="customer-number customer-number--last">556 Domains</p>
-                    </div>
-                </div>
+            <div class="customer-number">
+                <p class="customer-number__text">1002 Clients</p>
+                <p class="customer-number__text">556 Servers</p>
+                <p class="customer-number__text customer-number__text--last">556 Domains</p>
             </div>
         </section>
 
@@ -143,7 +169,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <div class="pricing-box">
                             <p class="pricing-box__title">Starter</p>
                             <p class="pricing-box__price">
@@ -160,7 +186,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+
+                    <div class="col-12 col-md-6">
                         <div class="pricing-box">
                             <p class="pricing-box__title">Basic</p>
                             <p class="pricing-box__price">
@@ -176,7 +203,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+
+                    <div class="col-12 col-md-6">
+                        <div class="pricing-box">
+                            <p class="pricing-box__title">Premium</p>
+                            <p class="pricing-box__price">
+                                <span>$</span>11.99
+                            </p>
+                            <ul class="pricing-box__details">
+                                <li>100 GB Disk Space</li>
+                                <li>1 Sub Domain</li>
+                                <li>5 Email Account</li>
+                            </ul>
+                            <div class="pricing-box__button">
+                                <a class="btn pricing-box__btn" href="#">Get Started!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
                         <div class="pricing-box">
                             <p class="pricing-box__title">Premium</p>
                             <p class="pricing-box__price">
@@ -233,7 +278,7 @@
             </div>
         </section>
 
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-12">

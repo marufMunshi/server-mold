@@ -4,12 +4,11 @@ particlesJS.load('particles-js', 'particles.json', function() {
 });
 
 
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const menuLink = document.querySelector('.menu-link');
+const hamburgerMenu = document.querySelector('.touch-nav__hamburger-menu');
+const menuLink = document.querySelector('.touch-nav__menu-link');
 
 hamburgerMenu.addEventListener('click', function() {
     menuLink.classList.toggle('hidden-toggle');
-    // console.log('clicked');
 })
 
 // slick
@@ -17,33 +16,47 @@ hamburgerMenu.addEventListener('click', function() {
 $('.client-review__slider').slick({
     dots: true,
     arrows: false,
-    infinite: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'ease-in',
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1
-    //     }
-    //   }
-    // ]
-  });
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 409,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
+});
+
+const header = document.querySelector('#header');
+console.log(header.children[2].childNodes[1]);
+window.addEventListener('scroll', (e) => {
+    if(window.scrollY >= (header.offsetHeight - 200) ) {
+        header.children[1].classList.add('touch-nav--sticky');
+        header.children[2].childNodes[1].classList.add('touch-nav--sticky');
+    } else {
+        header.children[1].classList.remove('touch-nav--sticky');
+        header.children[2].childNodes[1].classList.remove('touch-nav--sticky');
+    }
+});
+
+// console.log(header.children);
+

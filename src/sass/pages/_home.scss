@@ -7,16 +7,56 @@ Header Start
     text-align: center;
     font-weight: normal;
     word-spacing: 3px;
+
+    @include phablet {
+        font-size: $font-size + 5%;
+    }
+
+    @include tablet {
+        font-size: $font-size + 10%;
+    }
+
+    @include smallLaptop {
+        font-size: $font-size + 15%;
+    }
+
+    @include laptop {
+        font-size: $font-size + 20%;
+    }
+
+    @include desktop {
+        font-size: $font-size + 25%;
+    }
 }
 
 @mixin home-page-list($color, $content) {
-    margin-top: 20px;
     list-style: none;
     font-family: $secondary-font;
     font-size: 110%;
     word-spacing: 2px;
 
+    @include phablet {
+        font-size: 115%;
+    }
+
+    @include tablet {
+        font-size: 120%;
+    }
+
+    @include smallLaptop {
+        font-size: 125%;
+    }
+
+    @include laptop {
+        font-size: 130%;
+    }
+
+    @include desktop {
+        font-size: 135%;   
+    }
+
     li {
+        padding: 1px 0;
         &::before{
             font-family: ionicons;
             content: $content;
@@ -42,16 +82,58 @@ header {
 
     .hero-text-box {
         position: absolute;
-        top: 45%;
-        left: 30%;
-        transform: translate(-30%, -45%);
+        top: 55%;
+        left: 12%;
+        transform: translate(-7%, -55%);
         color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+
+        @include phablet {
+            padding: 35px 20px;
+        }
+        
+        @include tablet {
+            padding: 55px 30px;
+            left: 20%;
+        }
+
+        @include smallLaptop {
+            padding: 50px 40px;
+            left: 35%;
+            transform: translate(-35%, -55%);
+        }
+
+        @include laptop {
+            padding: 60px 45px;
+        }
 
         .hero-text-box__title {
             font-size: 220%;
             word-spacing: 5px;
             font-weight: bold;
             color: #fff;
+
+            @include phablet {
+                font-size: 230%;
+            }
+
+            @include tablet {
+                font-size: 240%;
+            }
+
+            @include smallLaptop {
+                font-size: 250%;
+            }
+
+            @include laptop {
+                font-size: 260%;
+            }
+
+            @include desktop {
+                font-size: 265%;
+            }
         }
 
         .hero-text-box__sub-title {
@@ -60,38 +142,140 @@ header {
             font-size: 140%;
             word-spacing: 3px;
             color: #ECF0F1;
+            
+            @include phablet {
+                font-size: 145%;
+            }
+
+            @include tablet {
+                font-size: 150%;
+                margin-top: 30px;
+            }
+
+            @include smallLaptop {
+                font-size: 155%;
+                margin-top: 40px;
+            }
+
+            @include laptop {
+                font-size: 160%;
+                margin-top: 45px;
+            }
+
+            @include desktop {
+                font-size: 165%;
+                margin-top: 50px;
+            }
         }
 
         .hero-text-box__details{
-            @include home-page-list(#ffffff, "\f120");
-        }
-
-        a {
-            display: inline-block;
+            @include home-page-list(#60ba74, "\f120");
             margin-top: 30px;
+
+            @include tablet {
+                margin-top: 40px;
+            }
+
+            @include smallLaptop{
+                margin-top: 50px;
+            }
+
+            @include laptop {
+                margin-top: 55px;
+            }
+
+            @include desktop {
+                margin-top: 60px;
+            }
+
+            li {
+                padding: 2.5px 0;
+                color: #ecf0f1;
+            }
         }
 
         .hero-btn {
-            @include primary-button ($primary-color, #ffffff, 110% );
+            @include primary-button (darken($primary-color, 15), #ffffff, darken($primary-color, 20), 110% );
             box-shadow: none;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 35px;
+
+            @include tablet {
+                margin-top: 45px;
+            }
+
+            @include smallLaptop {
+                margin-top: 55px;
+            }
+
+            @include laptop {
+                margin-top: 60px;
+            }
+
+            @include desktop {
+                margin-top: 65px;
+            }
         }
+
     }
 
     .contact {
         color: #fff;
         position: absolute;
         bottom: 3%;
-        left: 10%;
+        left: 7%;
         font-weight: bold;
         letter-spacing: 2px;
+        font-size: 100%;
+
+        @include phablet {
+            font-size: 105%;
+        }
+
+        @include tablet {
+            font-size: 110%;
+            left: 3%;
+        }
+
+        @include smallLaptop {
+            font-size: 115%;
+        }
+
+        @include laptop {
+            font-size: 120%;
+        }
+
+        @include desktop {
+            font-size: 125%;
+        }
 
         i {
-            font-size: 170%;
+            font-size: 200%;
             vertical-align: middle;
+
+            @include phablet {
+                font-size: 210%;
+            }
+
+            @include tablet {
+                font-size: 220%;
+            }
+
+            @include smallLaptop {
+                font-size: 230%;
+            }
+
+            @include laptop {
+                font-size: 240%;
+            }
+
+            @include desktop {
+                font-size: 250%;
+            }
             
             &::before {
-                animation: bounce .9s infinite;
+                animation: mobile-ringing 1.9s ease infinite;
             }
         }
     }
@@ -105,31 +289,79 @@ Features Section Start
 -------------------------*/
 
 #features-section {
-    padding-top: 50px;
+    padding: 50px 0 25px 0;
     
     .features {
+        display: flex;
+        flex-direction: column;
         background-color: #ffffff;
         border: 1px solid #ececec;
         border-radius: 5px;
         padding: 0 10px;
         margin-bottom: 25px;
+        min-height: 200px;
+
+        @include tablet {
+            min-height: 280px;
+        }
+
+        @include laptop {
+            min-height: 250px;
+        }
 
         .features__title {
+            @include home-page-title(160%);
+            vertical-align: middle;
+
             img {
                 width: 42px;
                 height: auto;
                 margin-right: 5px;
+
+                @include phablet {
+                    width: 47px;
+                }
+
+                @include tablet {
+                    width: 42px;
+                }
+
+                @include smallLaptop {
+                    width: 52px;
+                }
             }
-            @include home-page-title(160%);
         }
 
         .features__description {
             font-family: $secondary-font;
-            margin: 20px 0;
+            padding: 20px 0;
             word-spacing: 2px;
             line-height: 140%;
             font-size: 105%;
             color: #4d4b4b;
+
+            @include phablet {
+                font-size: 110%;   
+            }
+
+            @include tablet {
+                font-size: 115%;
+                text-align: center;
+                padding: 35px 0;
+            }
+
+            @include smallLaptop {
+                font-size: 125%;
+            }
+
+            @include laptop {
+                font-size: 130%;
+                padding: 30px 20px;
+            }
+
+            @include desktop {
+                font-size: 135%;
+            }
         }
     }
 }
@@ -142,19 +374,63 @@ Features Section End
 Customer In Numbers Section Start
 ---------------------------------*/
 #customer-in-numbers {
-    padding: 50px 0;
+    height: 200px;
     background-image: linear-gradient(to left top, rgba(82, 90, 119, 0.9), rgba(29, 130, 125, .7)), url(../images/clouds.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     .customer-number {
-        text-align: center;
-        color: #ffffff;
-        font-size: 140%;
-        font-weight: bold;
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-flow: row wrap;
 
-        &.customer-number--last {
-            padding-top: 20px;
+        @include tablet {
+            flex-flow: nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .customer-number__text {
+            flex: 2 50%;
+            text-align: center;
+            align-self: center;
+            color: #ffffff;
+            font-size: 140%;
+            font-weight: bold;
+
+            @include phablet {
+                font-size: 150%;
+            }
+
+            @include tablet {
+                font-size: 160%;
+                flex: 1;
+            }
+
+            @include smallLaptop {
+                font-size: 170%;   
+            }
+
+            @include laptop {
+                font-size: 180%;
+            }
+
+            @include desktop {
+                font-size: 190%;
+            }
+    
+            &.customer-number__text--last {
+                flex: 1 100%;
+                text-align: center;
+
+                @include tablet {
+                    flex: 1;
+                }
+            }
         }
     }
 }
@@ -168,10 +444,12 @@ Plans Section Start
 ---------------------*/
 #plans {
     background-color: #ffffff;
+    padding: 50px 0 0 0;
 
     h1 {
         @include home-page-title(170%);
-        padding: 37px 0;
+        padding: 0 0 50px 0;
+
         &:after {
             content: ""; /* This is necessary for the pseudo element to work. */ 
             display: block; /* This will put the pseudo element on its own line. */
@@ -179,14 +457,32 @@ Plans Section Start
             width: 70%; /* Change this to whatever width you want. */
             padding-top: 10px; /* This creates some space between the element and the border. */
             border-bottom: 2px solid #555; /* This creates the border. Replace black with whatever color you want. */
+
+            @include tablet {
+                width: 42%;
+            }
+
+            @include smallLaptop {
+                width: 32%;
+            }
+
+            @include laptop {
+                width: 26%;
+            }
+
+            @include desktop {
+                width: 19%;
+            }
         }
     }
 
     .pricing-box {
-        padding: 20px 10px 40px 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
         border: 1px solid #599299;
         border-radius: 5px;
-        margin-bottom: 40px;
+        margin-bottom: 65px;
 
         .pricing-box__title {
             @include home-page-title(150%);
@@ -198,6 +494,7 @@ Plans Section Start
 
         .pricing-box__price {
             @include home-page-title(190%);
+            padding: 25px 0;
             font-family: $secondary-font;
             color: $secondary-color;
             font-weight: bold;
@@ -211,17 +508,18 @@ Plans Section Start
 
         .pricing-box__details {
             @include home-page-list($primary-color, "\f121");
-            text-align: center;
+            align-self: center;
         }
 
         .pricing-box__button {
-            text-align: center;
-            margin-top: 20px;
+            align-self: center;
+            padding-top: 30px;
+            margin-bottom: -38px;
+
             .pricing-box__btn {
-                @include primary-button ($primary-color, #ffffff, 110% );
+                @include primary-button ($primary-color, #ffffff, darken($primary-color, 10), 110% );
                 box-shadow: none;
                 font-weight: bold;
-                margin-bottom: -98px;
             }
         }
 
@@ -242,13 +540,31 @@ Testimonial Section Start
 
     h1 {
         @include home-page-title(170%);
+        padding: 35px 0 0 0; 
+
         &:after {
             content: ""; /* This is necessary for the pseudo element to work. */ 
             display: block; /* This will put the pseudo element on its own line. */
             margin: 0 auto; /* This will center the border. */
             width: 50%; /* Change this to whatever width you want. */
             padding-top: 10px; /* This creates some space between the element and the border. */
-            border-bottom: 3px solid #fff; /* This creates the border. Replace black with whatever color you want. */
+            border-bottom: 2px solid #fff; /* This creates the border. Replace black with whatever color you want. */
+
+            @include tablet {
+                width: 30%;
+            }
+
+            @include smallLaptop {
+                width: 20%;
+            }
+
+            @include laptop {
+                width: 18%;
+            }
+
+            @include desktop {
+                width: 13%;
+            }
         }
     }
 
@@ -260,6 +576,25 @@ Testimonial Section Start
             font-family: $secondary-font;
             word-spacing: 3px;
             line-height: 145%;
+            font-size: 105%;
+
+            @include phablet {
+                font-size: 110%;
+            }
+
+            @include tablet {
+                font-size: 115%;
+            }
+
+            @include smallLaptop {
+                font-size: 120%;
+                padding-top: 40px;
+                padding-bottom: 60px;   
+            }
+
+            @include laptop {
+                font-size: 125%;
+            }
 
             cite {
                 display: block;
@@ -271,6 +606,14 @@ Testimonial Section Start
                     border-radius: 50%;
                     margin-right: 10px;
                     vertical-align: middle;
+
+                    @include phablet {
+                        height: 50px;
+                    }
+
+                    @include tablet {
+                        height: 55px;
+                    }
                 }
             }
         }
